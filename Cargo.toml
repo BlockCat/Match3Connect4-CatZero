@@ -1,4 +1,13 @@
-[workspace]
-members = [
-    "m3c4"
-]
+[package]
+name = "m3c4"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+mcts = {  git = "https://github.com/BlockCat/mcts.git" }
+catzero = { git = "https://github.com/BlockCat/CatZero.git" }
+rand = "0.8.4"
+tensorflow = { version = "0.17.0", features=["tensorflow_gpu"] }
+rayon = "1.5.1"
